@@ -4,11 +4,7 @@
 
 This code was written in Python 2.7 originally but in this repo has been modified to python 3.8 and requires
 
-* [Theano 1.0.5]
-
-Optional but recommended if you plan to run many trials with the trained networks outside of Theano:
-
-* [Cython](http://cython.org/)
+* Pytorch>= 1.11.0+cu113
 
 Optional but recommended for analysis and visualization of the networks (including examples from the paper):
 
@@ -64,22 +60,6 @@ From which restingstate, structure and costs are used to generate respective gra
 
 * If you still have difficulties with training, try changing the value of `lambda_Omega`, the multiplier for the vanishing-gradient regularizer.
 
-* It's common to see the following warning when running Theano:
-
-  ```
-  RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility
-  rval = __import__(module_name, {}, {}, [module_name])
-  ```
-  or
-
-  ```
-  WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
-  ERROR (theano.gpuarray): pygpu was configured but could not be imported or is too old (version 0.7 or higher required)
-  ```
-
-  This is almost always innocuous and can be safely ignored. 
-  Except for the fact that it is unable to use GPU if this shows up. But it will still work around with CPU
-
 ## Acknowledgments
 
 This code would not be possible without
@@ -99,8 +79,8 @@ MIT
 
 * Song, H. F.\*, Yang, G. R.\*, & Wang, X.-J. "Training Excitatory-Inhibitory Recurrent Neural Networks for Cognitive Tasks: A Simple and Flexible Framework." *PLoS Comp. Bio.* 12, e1004792 (2016). (\* = equal contribution)
 
-* It was modified to python 3.8 by:
+* It was modified for Pytorch by:
 Mohit Mathuria
-Junior Undergraduate Student, IIT Jodhpur 2022
+In Junior Undergraduate Year, IIT Jodhpur 2022
 As part of summer project under prof. Shilpa Dang, Assistant Professor
 School of Artificial Intelligence and Data Science (AIDE)
