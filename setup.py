@@ -11,7 +11,7 @@ import numpy as np
 
 # Version warning
 if sys.version_info >= (3,):
-    print("Please note that this software was only tested with Python 3.9.")
+    print("Please note that this software was only tested with Python 3.9.13")
 
 # # Determine whether Cython is available
 # try:
@@ -34,14 +34,15 @@ if sys.version_info >= (3,):
 
 # Setup
 setup(
-    name='Neo_Pycog',
+    name='NeoPycog',
     version='0.2',
     license='MIT',
     author='[H. Francis Song, Guangyu R. Yang] (original pycog owners), [Mohit Mathuria] (Neo-pycog branch owner)',
     author_email='mohitmathuria786@gmail.com',
-    url='https://github.com/Truion/Neo-pycog',
+    url='https://github.com/Truion/Neo_pycog',
 #     cmdclass=cmdclass,
 #     ext_modules=ext_modules,
+    Summary='A Python package for simulating cognitive models',
     packages=find_packages(exclude=['examples', 'examples.*', 'paper']),
     setup_requires=['numpy'],
     install_requires=['torch'],
